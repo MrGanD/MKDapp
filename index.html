@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mortal KomDapp</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="./web3.min.js"></script>
+    <script src="./abi.js"></script>
+    <script src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="row">
+    <div class="d-flex col-md-6">
+        <img src="img/MKDAPP.png" alt="Mortal Komdapp" id="MKdappLogo">
+        <span class="text-white w-75 p-3" id="websiteTitle">by MrGanD</span>
+    </div>
+    <div class="d-flex flex-row-reverse col-md-6">
+        <div id="userAccount" class="text-danger p-2">0x...</div>
+        <div class="p-2 text-white">Gambler account:</div>
+    </div>
+    </div>
+    <hr>
+    <div class="row titles text-white">
+        <div class="col-md-6">
+            <p>Bookie balance:</p>
+        </div>
+        <div class="col-md-6">
+            <p>Gambler balance:</p>
+        </div>
+    </div>    
+    <div class="row values text-white">
+        <div class="col-md-6">
+            <p ><span id="bookieMax">???</span><span> ETH</span></p>
+        </div>
+        <div class="col-md-6">
+            <p><span id="userAccountStatus">???</span><span> ETH</span></p>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="container col-lg-8 col-md-8 col-sm-12 text-white">
+        <div class="row">
+            <div class="card text-center dark-bg mb-3" style="width: 18rem;">
+                <h5 class="card-header">1. Select your bet amount </h5>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ethValue" id="eth01" value="0.1" checked>
+                        <label class="form-check-label" for="eth01">
+                            0.1 ETH
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ethValue" id="eth02" value="0.2">
+                        <label class="form-check-label" for="eth02">
+                            0.2 ETH
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ethValue" id="eth05" value="0.5">
+                        <label class="form-check-label" for="eth05">
+                            0.5 ETH
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ethValue" id="eth1" value="1">
+                        <label class="form-check-label" for="eth1">           
+                            1 ETH          
+                        </label>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="card  text-center dark-bg mb-3" style="width: 18rem;">
+                <h5 class="card-header">2. Choose your fighter</h5>
+                <div class="card-body">
+                    <a id="bet-scorpion" class="btn"><img src="./img/Scorpion.png" onclick="scorpionSelected.playclip(); mark(this)" id="scorpion" alt="Scorpion"><br>Scorpion</a>
+                    <img src="./img/VS.png" id="vs" alt="vs">
+                    <a id="bet-subZero" class="btn"><img src="./img/SubZero.png" onclick="subZeroSelected.playclip(); mark(this)" id="subZero" alt="SubZero"><br>SubZero</a>          
+                </div>
+                <h5 class="card-header">3. Click on logo to fight!</h5>
+                <div id="result-text" class="card-footer text-white">
+                    Who will win?
+                </div>
+                <div class="flip-card" onclick="tossCoin(); fight.playclip()">
+                    <div id="theCoin" class="flip-card-inner">
+                        <div id="coinFront" class="flip-card-front">
+                        <img src="./img/MKlogo.png" width="128" height="128" alt="redMKlogo">
+                        </div>
+                        <div id="coinBack" class="flip-card-back flipped">
+                        <img src="./img/MKlogo2.png" width="128" height="128" alt="blueMKlogo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card dark-bg mb-3" style="width: 18rem;">
+                <h5 class="card-header">Your statistics</h5>
+                <div class="card-body">
+                    <p id="stat-fight" class="card-text">Fights: 0</p>
+                    <p id="stat-won" class="card-text>">Won: 0</p>
+                    <p id="stat-lost" class="card-text">Lost: 0</p>
+                </div>
+                <div id="MKsong">
+                    <audio id="myAudio" src="audio/Mortal_Kombat.mp3" preload="auto"></audio>
+                <a class="btn" onClick="togglePlay()">Play MK theme song</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
