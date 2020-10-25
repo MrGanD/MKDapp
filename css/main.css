@@ -1,0 +1,653 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(255, 0, 0, 0.7);
+    margin: 0 auto;
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*DEFAULT ZOOM*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  /*letter-spacing: 1px;*/
+  background-image: url('../img/ScorpionVSubZero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  color: #5a5a5a;
+  position: relative;
+  overflow-x: hidden;
+}
+a {
+  cursor: url('../img/crosshair.png') 20 20, pointer !important;
+}
+a:hover {
+  cursor: url('../img/crosshair.png') 20 20, pointer !important;
+}
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+header {
+    height: 78px;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    right: 0;
+    left: 0;
+    z-index: 25 !important;
+    cursor: url('../img/crosshair.png') 20 20, crosshair !important;
+}
+#websiteTitle{
+  font-family: 'Black Ops One', cursive;
+}
+#MKdappLogo{
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.mkBlock {
+   display: block; 
+}
+.titles{
+  margin-left: 0px;
+  margin-top: 10px;
+  padding: 0;
+}
+.values {
+  margin-left: 0px;
+  margin-top: -15px;
+  padding: 0;
+}
+#MKsong{
+  text-align: center;
+}
+#scorpion{
+  display: inline-block;
+  width: 74px;
+  height: 80px;
+  transition: transform 0.2s;
+}
+#scorpion:hover{
+  transform: scale(1.5,1.5) translate(0px, -10px);
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+}
+#scorpion:active{
+  transform: scale(0.9,0.9);
+  transition-timing-function: ease-in-out;
+  background-color: rgb(255, 40, 40);
+  opacity: 0.5;
+  }
+#subZero{
+  display: inline-block;
+  width: 74px;
+  height: 80px;
+  transition: transform 0.2s;
+}
+#subZero:hover{
+  transform: scale(1.5,1.5) translate(0px, -10px);
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+}
+#subZero:active{
+  transform: scale(0.9,0.9);
+  transition-timing-function: ease-in-out;
+  background-color: rgb(255, 40, 40);
+  opacity: 0.5;
+  }
+#vs{
+  display: inline-block;
+    width: 35px;
+    height: 30px;
+}
+.dark-bg {
+  background-color: rgba(60, 60, 60, 0.4) !important;
+}
+.card {
+  margin-top: 45px;
+}
+.card-header {
+  background-color: rgba(15, 15, 15, 0.4) !important;
+}
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-card {
+   margin-left: 27%;
+   width: 128px;
+   height: 128px;
+   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   cursor: url('../img/crosshair.png') 20 20, pointer !important;
+ }
+ /* This container is needed to position the front and back side */
+ .flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   /*
+   animation: coin-rotate 0.35s both infinite;
+   transform-style: preserve-3d;
+   */
+ }
+
+ .flip-fast {
+   animation: coin-rotate 0.6s both infinite;
+   transform-style: preserve-3d;
+ }
+
+  .flip-slow {
+    animation: coin-rotate 0.8s both infinite;
+    transform-style: preserve-3d;
+  }
+
+ /* Do an horizontal flip when you move the mouse over the flip box container */
+ .flip-card .flip-card-inner {
+   transform: rotateY(0deg);
+ }
+
+ /* Position the front and back side */
+ .flip-card-front, .flip-card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   -webkit-backface-visibility: hidden; /* Safari */
+   backface-visibility: hidden;
+ }
+
+ /* Style the front side (fallback if image is missing) */
+ .flip-card-front {
+
+ }
+
+ /* Style the back side */
+ .flip-card-back {
+   /*transform: rotateY(180deg);*/
+ }
+
+ .flipped {
+   transform: rotateY(180deg);
+ } 
+ @keyframes coin-rotate {
+  0 {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+
+}
+
+iframe {
+  width: 416px;
+  height: 234px;
+}
+.firsthr {
+  border: 6px solid rgba(220, 40, 40, 0.4); 
+}
+.secondhr {
+  border: 10px solid rgba(220, 120, 120, 0.4); 
+}
+/* Remove padding on mobile devices */
+.featurette-divider {
+  margin: -10px 0;
+  padding-bottom: 5px; /* Space out the Bootstrap <hr> more */
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+  margin-top: 80px;
+  font-weight: 400;
+  line-height: 1;
+}
+.intro {
+    margin-top: 80px;
+  }
+.featurette-heading-small {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+@media only screen and (min-width: 768px) {
+.mobilna {
+  padding-top:5%;
+  margin-bottom: 5%;
+}
+}
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 0px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-j: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+}
+@media (min-width: 992px) {
+  .intro {
+    margin-top: 80px;
+  }
+  .featurette-heading {
+    margin-top: 80px;
+  }
+}
+@media (min-width: 1366px) {
+  #my{
+    zoom: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+.navbar-brand {
+  font-size: 1.8em !important;
+  padding-top: 15px !important;
+}
+.item {
+  display: block;
+  position: absolute;
+  max-width: 100% !important;
+  height: 380px !important;
+  background-size: cover !important;
+}
+.carouselContainer {
+  margin: 0 auto;
+  top: 170px;
+  max-width: 100% !important;
+  height: 640px !important;
+  position: relative;
+  perspective: 1200px;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+.a {
+  transform: rotateY(0deg) translateZ(410px) !important;
+}
+.b {
+  transform: rotateY(60deg) translateZ(410px) !important;
+}
+.c {
+  transform: rotateY(120deg) translateZ(410px) !important;
+}
+.d {
+  transform: rotateY(180deg) translateZ(410px) !important;
+}
+.e {
+  transform: rotateY(240deg) translateZ(410px) !important;
+} 
+.f {
+  transform: rotateY(300deg) translateZ(410px) !important;
+}
+.left-caption, .right-caption, .specialL-caption, .specialR-caption {
+  max-width:350px !important;
+  margin: 0 auto !important;
+  margin-top: 50px !important;
+  margin-bottom: 0px !important;
+}
+.carousel-caption h1 {
+  letter-spacing: 2px;
+  font-size: 1.5em;
+}
+.carousel-caption h3 {
+  letter-spacing: 2px;
+  font-size: 1em;
+}
+.carousel-caption p {
+  font-size: 0.7em !important;
+}
+.btn-primary {
+  font-size: 1em !important;
+}
+#lang-en {
+    position: absolute !important;
+    top: 250px !important;
+}
+#lang-hr {
+    position: absolute !important;
+    left: 250px !important;
+}
+.cf img {
+  max-width: 100% !important;
+  height: 380px !important;
+}
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 992px) {
+.featurette-divider {
+  margin: 30px 0; /* Space out the Bootstrap <hr> more */
+  }
+.featurette-heading {
+    margin-top: 30px !important;
+  }
+h1 {
+  font-size: 2.5em;
+  letter-spacing: 10px;
+}
+h2 {
+  font-size: 2em;
+  letter-spacing: 4px;
+}
+h3 {
+  font-size: 1.8em;
+  letter-spacing: 2px;
+}
+h4 {
+  font-size: 1.4em;
+  letter-spacing: 1px;
+}
+.carousel-caption h1 {
+  color: rgba(250, 200, 200, 0.8);
+  text-shadow: 2px 2px 5px #000;
+  letter-spacing: 5px;
+  font-size: 2.5em !important;
+}
+.carousel-caption h2 {
+  font-size: 2em !important;
+}
+.carousel-caption h3 {
+  font-size: 1.8em !important;
+}
+.next, .prev {
+  top: 640px;
+}
+.next:active, .prev:active {
+  top: 644px;
+}
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+footer {
+  font-size: 1.2em !important;
+  margin: -25px 0 -20px 0;
+  height: 46px;
+  color: rgba( 20, 20, 20, 1) !important;
+  font-weight: bold;
+  background-color: rgba( 160, 50, 50, 0.7);
+  border-radius: 30px;
+  padding: 12px;
+  clear: both;
+}
+footer a { 
+    color: rgb(40, 40, 40)!important;
+  }
+footer a:hover { 
+    color: rgb(150, 150, 150) !important;
+  }
+footer a:visited { 
+    color: rgb(20, 20, 20) !important;
+  }
