@@ -1,7 +1,7 @@
 var web3 = new Web3(Web3.givenProvider);
 console.log("web3 version = " + web3.version);
 var contractInstance;
-var userAccount = "0xC7BAe2455A6aDE972C5647849ABaaF72f94A4E5B";
+var userAccount = "0xADDYOURMETAMASKADDRESS";
 var contractAddress = "0x8A4f5a640fedA4EB6fD7fb703915f1828B4549F9";
 var bookieLimit = 0;
 var userLimit = 0;
